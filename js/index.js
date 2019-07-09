@@ -1,27 +1,28 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
 
    var slides = document.querySelectorAll('.slide > ul > li');
    var nut = document.querySelectorAll('.nut > span');
    var nextBtn = document.querySelector('.slide .next-btn > p.arrow');
    console.log(nextBtn);
-   
+
    function resetSlide() {
-      for(let i = 0; i < slides.length; i++){
+      for (let i = 0; i < slides.length; i++) {
          slides[i].classList.remove('hienra');
       }
    }
+
    function resetNut() {
       for (let i = 0; i < nut.length; i++) {
          nut[i].classList.remove('orange');
       }
    }
    // nut slide
-   for(let i = 0; i < nut.length; i++){
+   for (let i = 0; i < nut.length; i++) {
       nut[i].addEventListener('click', function () {
          var nutht = this;
          var idSlide = 0;
 
-         for (; nutht = nutht.previousElementSibling; idSlide++){}
+         for (; nutht = nutht.previousElementSibling; idSlide++) {}
 
          resetSlide();
          resetNut();
@@ -37,16 +38,16 @@ document.addEventListener('DOMContentLoaded', function(){
 
       var slideht = document.querySelector('.slide ul li.hienra');
       var vtSlideht = 0;
-      for(; slideht = slideht.previousElementSibling; vtSlideht++){}
+      for (; slideht = slideht.previousElementSibling; vtSlideht++) {}
 
       resetSlide();
       resetNut();
-      if(vtSlideht === slides.length-1){
+      if (vtSlideht === slides.length - 1) {
          vtSlideht = -1;
-         slides[vtSlideht+1].classList.add('hienra');
+         slides[vtSlideht + 1].classList.add('hienra');
          nut[vtSlideht + 1].classList.add('orange');
       }
-      slides[vtSlideht+1].classList.add('hienra');
+      slides[vtSlideht + 1].classList.add('hienra');
       nut[vtSlideht + 1].classList.add('orange');
    })
    //time next slide
@@ -70,22 +71,21 @@ document.addEventListener('DOMContentLoaded', function(){
       clearInterval(timer);
    }
 
-   for(let i = 0; i < nut.length;i++){
+   for (let i = 0; i < nut.length; i++) {
       nut[i].addEventListener('click', clearInter);
    }
    //cuon chuot thay doi nav
    window.onscroll = function () {
       var nav = document.querySelector('.nav');
       var top = document.body.scrollTop || document.documentElement.scrollTop;
-      
-      if(top > 200){
+
+      if (top > 200) {
          nav.style.backgroundColor = 'white';
          nav.style.boxShadow = '0 0 1rem #ddd';
-      }
-      else{
+      } else {
          nav.style.backgroundColor = 'transparent';
          nav.style.boxShadow = '0 0 1rem transparent';
       }
-      
+
    }
-}, false); 
+}, false);
