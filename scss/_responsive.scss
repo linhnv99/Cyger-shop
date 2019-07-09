@@ -1,0 +1,59 @@
+@media only screen and (max-width: 1400px) {
+      .nav {
+         padding: 0 2rem;
+
+         &-logo {
+            margin-right: 4rem;
+         }
+
+         &-left {
+            padding: 4rem 2rem;
+
+            .menu {
+               a {
+                  margin-right: 2.4rem;
+                  font-size: 1.2rem;
+               }
+            }
+         }
+
+         &-right {
+            padding: 5.1rem 2rem;
+
+            input[type=text] {
+               width: 8rem;
+               transition: 0.4s ease-out;
+               &:focus {
+                  width: 15rem;
+               }
+            }
+
+            input[type=button] {
+               margin-left: .5rem;
+               font-size: 1.2rem;
+            }
+
+            ul {
+               margin-left: 3.4rem;
+
+               li {
+                  margin-left: 2rem;
+               }
+            }
+
+         }
+      }
+      .slide{
+         height: 120vh;
+         .next{
+            right: 4rem;
+            
+         }
+         .nut{
+            right: 4rem;
+         }
+         .icon{
+            display: none;
+         }
+      }
+}

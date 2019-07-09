@@ -1,0 +1,303 @@
+@import 'config';
+@import 'animate';
+html {
+   font-size: 62.5%;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Montserrat', sans-serif;
+   box-sizing: border-box;
+   font-size: 1.6rem;
+}
+
+.nav-left,
+.nav-right {
+   display: flex;
+   align-items: center;
+}
+
+.nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 6rem;
+   background-color: transparent;
+   overflow: hidden;
+   position: fixed;
+   width: 100%;
+   z-index: 10000;
+   transition: 0.4s;
+   &-logo {
+      margin-right: 6rem;
+   }
+
+   &-left {
+      padding: 3rem 2rem;
+
+      .menu {
+         a {
+            font-size: 1.3rem;
+            color: $black-color;
+            font-weight: bold;
+            margin-right: 3.6rem;
+            text-transform: uppercase;
+            transition: 0.2s all;
+            cursor: pointer;
+
+            &:hover {
+               color: lighten($orange-color, 10%)
+            }
+         }
+      }
+   }
+
+   &-right {
+      padding: 4.1rem 2rem;
+
+      input[type=text] {
+         width: 21.5rem;
+         background-color: transparent;
+         color: $black-color;
+         font-weight: bold;
+         border: none;
+         border-bottom: 1px solid $black-color;
+         outline: none;
+      }
+
+      input[type=button] {
+         margin-left: 2.1rem;
+         color: $black-color;
+         background-color: transparent;
+         font-weight: bold;
+         border: none;
+         outline: none;
+         text-transform: uppercase;
+         font-size: 1.3rem;
+         cursor: pointer;
+
+         &:hover {
+            color: $orange-color;
+
+         }
+      }
+
+      ul {
+         margin-left: 4.7rem;
+
+         li {
+            display: inline-block;
+            margin-left: 3.2rem;
+            cursor: pointer;
+            &:hover {
+               color: $orange-color;
+            }
+         }
+
+         li:first-child {
+            margin-left: 0;
+         }
+
+         li:last-child {
+            position: relative;
+
+            span {
+               position: absolute;
+               right: -.5rem;
+               bottom: -.5rem;
+               background-color: white;
+               width: 1.3rem;
+               height: 1.3rem;
+               font-size: 1.2rem;
+               text-align: center;
+               cursor: pointer;
+               @include border-radius(50%);
+            }
+         }
+      }
+   }
+}
+
+// end nav
+.slide {
+   width: 100%;
+   height: 120vh;
+   position: relative;
+   ul {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      li {
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         opacity: 0;
+         transition: 0.8s ease-out;
+      }
+   }
+
+   &-item {
+      width: 100%;
+      height: 100%;
+
+      &-1,
+      &-2,
+      &-3 {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+      }
+      &-1{
+         background-image: url(../images/slider/slide1.png);
+      }
+      &-2{
+         background-image: url(../images/slider/slide2.png);
+      }
+      &-3{
+         background-image: url(../images/slider/slide3.png);
+      }
+   }
+   &-caption {
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 117rem;
+      height: 30rem;
+      z-index: 9999;
+      padding-right: 70rem;
+      text-align: left;
+      h3{
+         font-size: 1.4rem;
+         text-transform: uppercase;
+         color: $orange-color;
+         letter-spacing: .7rem;
+         font-weight: 600; 
+         margin-bottom: 2.5rem;
+         opacity: 0;
+
+      }
+      h1{
+         font-size: 6rem;
+         color: $black-color;
+         line-height: 7.2rem;
+         margin-bottom: 4.7rem;
+         opacity: 0;
+
+      }
+      .btn {
+         background-color: $black-color;
+         padding: 2rem;
+         color: white;
+         border-radius: 3rem;
+         display: inline-block;
+         opacity: 0;
+         span {
+            padding: 0 3rem;
+            border-right: 3px solid white;
+         }
+         button{
+            padding: 0 3rem;
+            border: none;
+            background-color: #000;
+            color: white;
+            outline: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.4s all;
+            &:hover {
+               color: $orange-color;
+            }
+         }
+      }
+   }
+   .next {
+      width: 45.5rem;
+      height: 15rem;
+      position: absolute;
+      bottom: 4.8rem;
+      right: 8rem;
+      z-index: 9999;
+      &-btn{
+         width: 50%;
+         height: 100%;
+         float: left;
+         padding: 3.4rem 2rem 3.4rem 3.1rem;
+         background-color: $black-color;
+         color: white;
+         p.arrow{
+            margin-bottom: 2.8rem;
+            font-weight: bold;
+            cursor: pointer;
+            i{
+               margin-left: 1.8rem;
+               
+            }
+         }
+         p.title{
+            font-weight: bold;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+         }
+      }
+      &-img {
+         width: 50%;
+         float: right;
+         img{
+            width: 100%;
+            height: 100%;;
+         }
+      }
+   }
+   .nut{
+      position: absolute;
+      top:50%;
+      right: 8rem;
+      transform: translateY(-50%);
+      width: 2rem;
+      overflow: hidden;
+      z-index: 9999;
+
+      span {
+         width: .6rem;
+         height: .6rem;
+         display: block;
+         border: 1px solid gray;
+         background-color: #ddd;
+         margin: 1rem 0;
+         border-radius: 50%;
+         cursor: pointer;
+      }
+   }
+   .icon {
+      position: absolute;
+      top:50%;
+      left: 8rem;
+      transform: translateY(-50%);
+      width: 2rem;
+      overflow: hidden;
+      z-index: 9999;
+      text-align: center;
+      color: $light-color;
+      i{
+         display: block;
+         margin: 2.2rem auto;
+         &:hover {
+            color: $orange-color;
+         }
+      }
+   }
+}
+
+
+
+@import 'responsive';
