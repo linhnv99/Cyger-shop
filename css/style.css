@@ -1,5 +1,6 @@
-ul {
+ul, li {
   margin: 0;
+  padding: 0;
   list-style-type: none; }
 
 a {
@@ -114,14 +115,15 @@ html {
   -o-transition: 0.4s;
   transition: 0.4s; }
   .nav-logo {
-    margin-right: 6rem; }
+    margin-right: 4.2rem; }
   .nav-left {
-    padding: 3rem 2rem; }
+    padding: 3rem 2rem;
+    cursor: pointer; }
     .nav-left .menu a {
       font-size: 1.3rem;
       color: #000;
       font-weight: bold;
-      margin-right: 3.6rem;
+      padding: 0 1.8rem;
       text-transform: uppercase;
       -webkit-transition: 0.2s all;
       -o-transition: 0.2s all;
@@ -130,7 +132,8 @@ html {
       .nav-left .menu a:hover {
         color: #f88d70; }
   .nav-right {
-    padding: 4.1rem 2rem; }
+    padding: 4.1rem 2rem;
+    cursor: pointer; }
     .nav-right input[type=text] {
       width: 21.5rem;
       background-color: transparent;
@@ -323,7 +326,8 @@ html {
     overflow: hidden;
     z-index: 9999;
     text-align: center;
-    color: #898989; }
+    color: #898989;
+    cursor: pointer; }
     .slide .icon i {
       display: block;
       margin: 2.2rem auto; }
@@ -459,7 +463,8 @@ html {
     -ms-flex-pack: center;
     justify-content: center;
     color: white; }
-    .categories-title h3, .categories-title h1 {
+    .categories-title h3,
+    .categories-title h1 {
       font-weight: bold;
       text-transform: uppercase; }
     .categories-title h3 {
@@ -476,15 +481,177 @@ html {
       font-size: 1.8rem;
       line-height: 2.8rem; }
 
+.arrivals {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10rem; }
+  .arrivals .container {
+    width: 1170px;
+    margin: 0 auto;
+    padding-top: 12rem; }
+  .arrivals-title {
+    width: 100%;
+    text-align: center; }
+    .arrivals-title h1 {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      line-height: 2.2rem;
+      letter-spacing: .4rem;
+      margin-bottom: 4rem; }
+    .arrivals-title ul {
+      margin-bottom: 7rem;
+      cursor: pointer; }
+      .arrivals-title ul li {
+        display: inline-block;
+        padding: 0 1.1rem;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: #898989;
+        line-height: 2.6rem;
+        font-weight: bold; }
+      .arrivals-title ul li.active {
+        color: #000; }
+  .arrivals-product ul li {
+    width: 27rem;
+    height: 47rem;
+    margin-right: 2.54rem;
+    margin-bottom: 4.2rem;
+    display: inline-block;
+    position: relative;
+    -webkit-transition: 0.4s all;
+    -o-transition: 0.4s all;
+    transition: 0.4s all; }
+  .arrivals-product ul li:nth-child(4n) {
+    margin-right: 0; }
+  .arrivals-product ul li:hover {
+    -webkit-box-shadow: 0 0 5rem #ddd;
+    box-shadow: 0 0 5rem #ddd; }
+    .arrivals-product ul li:hover .arrivals-product-imgPr {
+      border: none;
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1); }
+    .arrivals-product ul li:hover .price {
+      opacity: 0; }
+    .arrivals-product ul li:hover .wpPr {
+      opacity: 1; }
+  .arrivals-product-imgPr {
+    height: 37rem;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    border: 1px solid #f3f3f3;
+    -webkit-transition: 0.4s -webkit-transform;
+    transition: 0.4s -webkit-transform;
+    -o-transition: 0.4s transform;
+    transition: 0.4s transform;
+    transition: 0.4s transform, 0.4s -webkit-transform;
+    cursor: pointer; }
+    .arrivals-product-imgPr .sale,
+    .arrivals-product-imgPr .new {
+      position: absolute;
+      top: 9%;
+      right: 9%;
+      padding: .6rem 1.2rem;
+      background-color: #f6663f;
+      border-radius: 2em;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase; }
+    .arrivals-product-imgPr .new {
+      background-color: #2e3192; }
+  .arrivals-product .imgPr1 {
+    background-image: url(../images/new-sp/new-sp1.png); }
+  .arrivals-product .imgPr2 {
+    background-image: url(../images/new-sp/new-sp2.png); }
+  .arrivals-product .imgPr3 {
+    background-image: url(../images/new-sp/new-sp3.png); }
+  .arrivals-product .imgPr4 {
+    background-image: url(../images/new-sp/new-sp4.png); }
+  .arrivals-product .imgPr5 {
+    background-image: url(../images/new-sp/new-sp5.png); }
+  .arrivals-product .imgPr6 {
+    background-image: url(../images/new-sp/new-sp6.png); }
+  .arrivals-product .imgPr7 {
+    background-image: url(../images/new-sp/new-sp7.png); }
+  .arrivals-product .imgPr8 {
+    background-image: url(../images/new-sp/new-sp8.png); }
+  .arrivals-product-titlePr {
+    height: 10rem;
+    width: 100%; }
+    .arrivals-product-titlePr .price {
+      padding-top: 2.4rem;
+      opacity: 1;
+      -webkit-transition: 0.5s all;
+      -o-transition: 0.5s all;
+      transition: 0.5s all; }
+      .arrivals-product-titlePr .price p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        color: #4d4d4d; }
+      .arrivals-product-titlePr .price small {
+        font-size: 1.4rem;
+        color: #898989; }
+    .arrivals-product-titlePr .wpPr {
+      width: 100%;
+      position: absolute;
+      opacity: 0;
+      top: 37rem;
+      left: 0;
+      padding: 2rem 3rem;
+      -webkit-transition: 0.5s all;
+      -o-transition: 0.5s all;
+      transition: 0.5s all; }
+      .arrivals-product-titlePr .wpPr .nutPr {
+        width: 50%;
+        float: left;
+        cursor: pointer; }
+        .arrivals-product-titlePr .wpPr .nutPr span {
+          width: 1rem;
+          height: 1rem;
+          margin: 0 .4rem;
+          border-radius: 50%;
+          background-color: #898989;
+          display: inline-block; }
+        .arrivals-product-titlePr .wpPr .nutPr span.active {
+          width: 1.2rem;
+          height: 1.2rem;
+          background-color: #f6663f; }
+      .arrivals-product-titlePr .wpPr .iconPr {
+        width: 50%;
+        float: right;
+        cursor: pointer; }
+        .arrivals-product-titlePr .wpPr .iconPr i {
+          margin: 0 .6rem; }
+          .arrivals-product-titlePr .wpPr .iconPr i:hover {
+            color: #f6663f; }
+    .arrivals-product-titlePr button {
+      margin-top: 2.2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      outline: none;
+      background-color: white;
+      cursor: pointer; }
+      .arrivals-product-titlePr button:hover {
+        color: #f6663f; }
+
 @media only screen and (max-width: 1400px) {
   .nav {
     padding: 0 2rem; }
     .nav-logo {
-      margin-right: 4rem; }
+      margin-right: 2.8rem; }
     .nav-left {
       padding: 4rem 2rem; }
       .nav-left .menu a {
-        margin-right: 2.4rem;
+        padding: 0 1.2rem;
         font-size: 1.2rem; }
     .nav-right {
       padding: 5.1rem 2rem; }

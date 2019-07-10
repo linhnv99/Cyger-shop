@@ -4,8 +4,9 @@ $blue-color: #2e3192;
 $black-color: #000;
 $max-width: 1920px;
 $container: 1170px;
-ul {
+ul,li {
    margin: 0; 
+   padding: 0;
    list-style-type: none;
 }
 a{

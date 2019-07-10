@@ -32,18 +32,19 @@ html {
    transition: 0.4s;
 
    &-logo {
-      margin-right: 6rem;
+      margin-right: 4.2rem;
    }
 
    &-left {
       padding: 3rem 2rem;
+      cursor: pointer;
 
       .menu {
          a {
             font-size: 1.3rem;
             color: $black-color;
             font-weight: bold;
-            margin-right: 3.6rem;
+            padding: 0 1.8rem;
             text-transform: uppercase;
             transition: 0.2s all;
             cursor: pointer;
@@ -57,6 +58,7 @@ html {
 
    &-right {
       padding: 4.1rem 2rem;
+      cursor: pointer;
 
       input[type=text] {
          width: 21.5rem;
@@ -310,6 +312,7 @@ html {
       z-index: 9999;
       text-align: center;
       color: $light-color;
+      cursor: pointer;
 
       i {
          display: block;
@@ -354,6 +357,7 @@ html {
             position: relative;
             cursor: pointer;
             overflow: hidden;
+
             img {
                display: block;
                width: 100%;
@@ -372,6 +376,7 @@ html {
                text-transform: uppercase;
                transition: 0.4s all;
             }
+
             .overlay {
                position: absolute;
                top: 0;
@@ -386,18 +391,21 @@ html {
                visibility: hidden;
                opacity: 0;
                transition: 0.4s;
+
                p {
                   color: white;
                   font-size: 1.8rem;
                   font-weight: bold;
                   text-transform: uppercase;
                   line-height: 2.8rem;
-                  
+
                }
-               p:first-child{
+
+               p:first-child {
                   transform: translateY(10rem);
                   transition: transform 0.4s;
                }
+
                p:last-child {
                   font-size: 1.2rem;
                   color: $orange-color;
@@ -407,21 +415,26 @@ html {
                   opacity: 0;
                }
             }
+
             &:hover {
-               .overlay{
+               .overlay {
                   visibility: visible;
                   opacity: 1;
-                  p:first-child{
+
+                  p:first-child {
                      transform: translateY(0);
                   }
-                  p:last-child{
+
+                  p:last-child {
                      opacity: 1;
                   }
                }
-               span{
+
+               span {
                   opacity: 0;
                }
-               img{
+
+               img {
                   transform: scale(1.1);
                }
             }
@@ -438,28 +451,266 @@ html {
       flex-direction: column;
       justify-content: center;
       color: white;
-      h3,h1{
+
+      h3,
+      h1 {
          font-weight: bold;
          text-transform: uppercase;
       }
-      h3{
+
+      h3 {
          font-size: 1.2rem;
          letter-spacing: .4rem;
          line-height: 2.8rem;
          margin-bottom: .6rem;
       }
-      h1{
+
+      h1 {
          font-size: 3rem;
          line-height: 4.8rem;
          letter-spacing: .6rem;
          margin-bottom: 2.2rem;
       }
-      p{
+
+      p {
          font-size: 1.8rem;
          line-height: 2.8rem;
       }
    }
 }
+
+// end categories
+
+.arrivals {
+   width: 100%;
+   overflow: hidden;
+   margin-top: 10rem;
+
+   .container {
+      width: $container;
+      margin: 0 auto;
+      padding-top: 12rem;
+   }
+
+   &-title {
+      width: 100%;
+      text-align: center;
+
+      h1 {
+         font-size: 2.4rem;
+         text-transform: uppercase;
+         font-weight: bold;
+         line-height: 2.2rem;
+         letter-spacing: .4rem;
+         margin-bottom: 4rem;
+      }
+
+      ul {
+         margin-bottom: 7rem;
+         cursor: pointer;
+
+         li {
+            display: inline-block;
+            padding: 0 1.1rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: $light-color;
+            line-height: 2.6rem;
+            font-weight: bold;
+
+         }
+
+         li.active {
+            color: $black-color;
+         }
+      }
+   }
+
+
+   &-product {
+      ul {
+         li {
+            width: 27rem;
+            height: 47rem;
+            margin-right: 2.54rem;
+            margin-bottom: 4.2rem;
+            display: inline-block;
+            position: relative;
+            transition: 0.4s all;
+         }
+
+         li:nth-child(4n) {
+            margin-right: 0;
+         }
+
+         li:hover {
+            box-shadow: 0 0 5rem #ddd;
+
+            .arrivals-product-imgPr {
+               border: none;
+               transform: scale(1.1);
+            }
+
+            .price {
+               opacity: 0;
+
+            }
+
+            .wpPr {
+               opacity: 1;
+
+            }
+
+         }
+      }
+
+      &-imgPr {
+         height: 37rem;
+         width: 100%;
+         background-position: center;
+         background-repeat: no-repeat;
+         transform: scale(1);
+         border: 1px solid #f3f3f3;
+         transition: 0.4s transform;
+         cursor: pointer;
+
+         .sale,
+         .new {
+            position: absolute;
+            top: 9%;
+            right: 9%;
+            padding: .6rem 1.2rem;
+            background-color: $orange-color;
+            border-radius: 2em;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+         }
+
+         .new {
+            background-color: $blue-color;
+         }
+      }
+
+      .imgPr1 {
+         background-image: url(../images/new-sp/new-sp1.png);
+      }
+
+      .imgPr2 {
+         background-image: url(../images/new-sp/new-sp2.png);
+      }
+
+      .imgPr3 {
+         background-image: url(../images/new-sp/new-sp3.png);
+      }
+
+      .imgPr4 {
+         background-image: url(../images/new-sp/new-sp4.png);
+      }
+
+      .imgPr5 {
+         background-image: url(../images/new-sp/new-sp5.png);
+      }
+
+      .imgPr6 {
+         background-image: url(../images/new-sp/new-sp6.png);
+      }
+
+      .imgPr7 {
+         background-image: url(../images/new-sp/new-sp7.png);
+      }
+
+      .imgPr8 {
+         background-image: url(../images/new-sp/new-sp8.png);
+      }
+
+      &-titlePr {
+         height: 10rem;
+         width: 100%;
+
+         .price {
+            padding-top: 2.4rem;
+            opacity: 1;
+            transition: 0.5s all;
+
+            p {
+               font-size: 1.5rem;
+               font-weight: bold;
+               margin-bottom: 2rem;
+               color: lighten($black-color, 30%);
+            }
+
+            small {
+               font-size: 1.4rem;
+               color: $light-color;
+            }
+         }
+
+         .wpPr {
+            width: 100%;
+            position: absolute;
+            opacity: 0;
+            top: 37rem;
+            left: 0;
+            padding: 2rem 3rem;
+            transition: 0.5s all;
+
+            .nutPr {
+               width: 50%;
+               float: left;
+               cursor: pointer;
+
+               span {
+                  width: 1rem;
+                  height: 1rem;
+                  margin: 0 .4rem;
+                  border-radius: 50%;
+                  background-color: $light-color;
+                  display: inline-block;
+               }
+
+               span.active {
+                  width: 1.2rem;
+                  height: 1.2rem;
+                  background-color: $orange-color;
+               }
+            }
+
+            .iconPr {
+               width: 50%;
+               float: right;
+               cursor: pointer;
+
+               i {
+                  margin: 0 .6rem;
+
+                  &:hover {
+                     color: $orange-color;
+                  }
+               }
+            }
+         }
+
+         button {
+            margin-top: 2.2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            outline: none;
+            background-color: white;
+            cursor: pointer;
+
+            &:hover {
+               color: $orange-color;
+            }
+         }
+      }
+   }
+}
+
+// end new arrivals
 
 
 @import 'responsive';
