@@ -827,6 +827,78 @@ body {
         background-color: #000;
         color: white; }
 
+.testimon {
+  padding-top: 11.6rem;
+  background-color: #000; }
+  .testimon .container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 11rem 0; }
+  .testimon-title h3, .testimon-title h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    letter-spacing: .4rem; }
+  .testimon-title h3 {
+    font-size: 1.2rem;
+    margin-bottom: 2.4rem; }
+  .testimon-title h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem; }
+  .testimon-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: white;
+    position: relative; }
+    .testimon-content .left {
+      width: 15%;
+      float: left; }
+      .testimon-content .left .imgT {
+        width: 7rem;
+        height: 7rem;
+        display: inline-block;
+        background-image: url(../images/imgtestimon.png);
+        background-color: white;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        margin-right: 10rem; }
+    .testimon-content .right {
+      width: 65%; }
+      .testimon-content .right blockquote {
+        margin-bottom: 2.6rem; }
+      .testimon-content .right p {
+        color: #f6663f;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .4rem; }
+    .testimon-content .nutTets {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 2rem;
+      overflow: hidden;
+      z-index: 9999; }
+      .testimon-content .nutTets span {
+        width: .6rem;
+        height: .6rem;
+        display: block;
+        border: 1px solid gray;
+        background-color: #ddd;
+        margin: 1rem 0;
+        border-radius: 50%;
+        cursor: pointer; }
+      .testimon-content .nutTets span.active {
+        background-color: #f6663f; }
+
 @media only screen and (max-width: 1400px) {
   .nav {
     padding: 0 2rem; }
