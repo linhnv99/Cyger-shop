@@ -946,32 +946,84 @@ body {
       color: #f6663f;
       font-size: 1.4rem; }
 
+.service {
+  width: 100%;
+  overflow: hidden; }
+  .service .container {
+    width: 1170px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 11.6rem;
+    padding-bottom: 6rem; }
+    .service .container ul {
+      width: 100%;
+      height: 100%; }
+      .service .container ul li {
+        width: 25%;
+        float: left;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .service .container ul li span {
+          margin-right: 3.8rem; }
+        .service .container ul li .feature h3 {
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-bottom: 1.6rem; }
+        .service .container ul li .feature p {
+          font-size: 1.4rem;
+          color: #898989; }
+
+.logo-brand {
+  width: 100%;
+  overflow: hidden; }
+  .logo-brand .container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 6rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+
 @media only screen and (max-width: 1400px) {
   .nav {
     padding: 0 2rem; }
     .nav-logo {
       margin-right: 2.8rem; }
-    .nav-left {
-      padding: 4rem 2rem; }
-      .nav-left .menu a {
-        padding: 0 1.2rem;
-        font-size: 1.2rem; }
-    .nav-right {
-      padding: 5.1rem 2rem; }
-      .nav-right input[type=text] {
-        width: 8rem;
-        -webkit-transition: 0.4s ease-out;
-        -o-transition: 0.4s ease-out;
-        transition: 0.4s ease-out; }
-        .nav-right input[type=text]:focus {
-          width: 15rem; }
-      .nav-right input[type=button] {
-        margin-left: .5rem;
-        font-size: 1.2rem; }
-      .nav-right ul {
-        margin-left: 3.4rem; }
-        .nav-right ul li {
-          margin-left: 2rem; }
+    .nav-left .menu a {
+      padding: 0 1.2rem;
+      font-size: 1.2rem; }
+    .nav-right input[type=text] {
+      width: 8rem;
+      -webkit-transition: 0.4s ease-out;
+      -o-transition: 0.4s ease-out;
+      transition: 0.4s ease-out; }
+      .nav-right input[type=text]:focus {
+        width: 15rem; }
+    .nav-right input[type=button] {
+      margin-left: .5rem;
+      font-size: 1.2rem; }
+    .nav-right ul {
+      margin-left: 3.4rem; }
+      .nav-right ul li {
+        margin-left: 2rem; }
   .slide {
     height: 120vh; }
     .slide .next {
