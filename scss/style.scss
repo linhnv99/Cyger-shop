@@ -904,17 +904,22 @@ body {
       }
    }
 }
+
 // end  best-collection
-.testimon{
+.testimon {
    padding-top: 11.6rem;
    background-color: $black-color;
+
    .container {
       width: $container;
       margin: 0 auto;
       padding: 11rem 0;
    }
-   &-title{
-      h3,h1{
+
+   &-title {
+
+      h3,
+      h1 {
 
          text-transform: uppercase;
          font-weight: bold;
@@ -922,23 +927,28 @@ body {
          letter-spacing: .4rem;
 
       }
-      h3{
+
+      h3 {
          font-size: 1.2rem;
          margin-bottom: 2.4rem;
       }
-      h1{
+
+      h1 {
          font-size: 3rem;
          margin-bottom: 3rem;
       }
    }
-   &-content{
+
+   &-content {
       display: flex;
       align-items: center;
       color: white;
       position: relative;
-      .left{
+
+      .left {
          width: 15%;
          float: left;
+
          .imgT {
             width: 7rem;
             height: 7rem;
@@ -951,12 +961,15 @@ body {
             margin-right: 10rem;
          }
       }
-      .right{
+
+      .right {
          width: 65%;
-         blockquote{
+
+         blockquote {
             margin-bottom: 2.6rem;
          }
-         p{
+
+         p {
             color: $orange-color;
             font-size: 1.2rem;
             text-transform: uppercase;
@@ -964,7 +977,8 @@ body {
             letter-spacing: .4rem;
          }
       }
-      .nutTets{
+
+      .nutTets {
          position: absolute;
          top: 50%;
          right: 0;
@@ -983,9 +997,77 @@ body {
             border-radius: 50%;
             cursor: pointer;
          }
-         span.active{
+
+         span.active {
             background-color: $orange-color;
          }
+      }
+   }
+}
+
+// end testimonals
+
+.insta-photo {
+   width: 100%;
+   height: 38.4rem;
+   position: relative;
+
+   ul {
+      width: 100%;
+      height: 100%;
+
+      li {
+         width: 20%;
+         height: 100%;
+         float: left;
+
+         .instar-img {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+         }
+      }
+   }
+
+   &-img1 {
+      background-image: url(../images/insta/insta-1.png);
+   }
+
+   &-img2 {
+      background-image: url(../images/insta/insta-2.png);
+   }
+
+   &-img3 {
+      background-image: url(../images/insta/insta-3.png);
+   }
+
+   &-img4 {
+      background-image: url(../images/insta/insta-4.png);
+   }
+
+   &-img5 {
+      background-image: url(../images/insta/insta-5.png);
+   }
+
+   button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 4.4rem 4.2rem;
+      color: white;
+      background-color: #0000007a;
+      border: none;
+      outline: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.4rem;
+
+      span {
+         color: $orange-color;
+         font-size: 1.4rem;
       }
    }
 }
