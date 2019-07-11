@@ -1,7 +1,8 @@
 @import 'config';
 @import 'animate';
 
-html {
+html,
+body {
    font-size: 62.5%;
 }
 
@@ -712,5 +713,197 @@ html {
 
 // end new arrivals
 
+.best-collec {
+   width: 100%;
+   padding-top: 5rem;
+
+   .container {
+      width: $container;
+      margin: 0 auto;
+   }
+
+   &-title {
+      width: 100%;
+      text-align: center;
+
+      h1 {
+         font-size: 3rem;
+         font-weight: bold;
+         text-transform: uppercase;
+         letter-spacing: .4rem;
+         margin-bottom: 7rem;
+      }
+   }
+
+   &-content {
+      width: 100%;
+      display: flex;
+      position: relative;
+
+      .imgB {
+         position: relative;
+
+         .title {
+            position: absolute;
+            bottom: 4rem;
+            left: 4rem;
+
+            h2 {
+               font-size: 2.4rem;
+               font-weight: bold;
+               margin-bottom: 1.4rem;
+            }
+
+            p {
+               font-size: 1.2rem;
+               color: $light-color;
+               text-transform: uppercase;
+               font-weight: bold;
+               letter-spacing: .4rem;
+            }
+         }
+
+         .rotate1,
+         .rotate2 {
+            position: absolute;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: .4rem;
+         }
+
+         p.rotate1 {
+            top: 0;
+            left: -25rem;
+            transform-origin: right;
+            transform: rotate(-90deg);
+            color: $orange-color;
+         }
+
+         p.rotate2 {
+            top: 0;
+            right: -30rem;
+            transform-origin: left;
+            transform: rotate(90deg);
+            color: $light-color;
+         }
+
+         .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #00000082;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 0.6s all;
+            cursor: pointer;
+
+            span {
+               width: 5rem;
+               height: 5rem;
+               background-color: $orange-color;
+               border-radius: 50%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               transform: scale(0.6);
+               transition: 0.4s all;
+
+               i {
+                  color: white;
+               }
+            }
+         }
+
+         &:hover {
+            .overlay {
+               opacity: 1;
+
+               span {
+                  transform: scale(1);
+               }
+            }
+         }
+      }
+   }
+
+   &-left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .imgB1,
+      .imgB2 {
+         background-position: center;
+         background-repeat: no-repeat;
+         width: 57rem;
+         height: 57rem;
+         background-color: #f7f7f7;
+      }
+
+      .imgB1 {
+         background-image: url(../images/best-sp/best-sp1.png);
+
+      }
+
+      .imgB2 {
+         background-image: url(../images/best-sp/best-sp2.png);
+      }
+
+      .glo {
+         position: absolute;
+         bottom: -12rem;
+         left: 0;
+      }
+
+   }
+
+   &-right {
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+
+      .wpb {
+         .imgB3 {
+            width: 47rem;
+            height: 67rem;
+            margin-top: 20rem;
+            background-image: url(../images/best-sp/best-sp3.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #f7f7f7;
+         }
+
+         button {
+            padding: 2.8rem 6.8rem;
+            margin-bottom: 8rem;
+            margin-top: 13rem;
+            font-size: 1.2rem;
+            border-radius: 5rem;
+            background-color: white;
+            border: 1px solid $black-color;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: .2rem;
+            outline: none;
+            cursor: pointer;
+            transition: 0.6s all;
+
+            &:hover {
+               background-color: $black-color;
+               color: white;
+            }
+         }
+      }
+
+   }
+}
 
 @import 'responsive';
