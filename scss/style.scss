@@ -1217,4 +1217,43 @@ body {
 
 // end newsletter
 
+.footer {
+   width: 100%;
+   border-top: 1px solid #f4f4f4;
+
+   .container {
+      width: $container;
+      margin: 0 auto;
+      padding: 6rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+         font-size: 1.4rem;
+         color: $light-color;
+      }
+
+      .iconF {
+         cursor: pointer;
+
+         span {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: $black-color;
+         }
+
+         i {
+            margin: 0 1rem;
+            color: $light-color;
+
+            &:hover {
+               color: $orange-color;
+            }
+         }
+      }
+   }
+}
+
+// end footer
 @import 'responsive';
